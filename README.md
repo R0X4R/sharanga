@@ -55,23 +55,25 @@ The name *Sharanga* is taken from Hindu scriptures, representing Lord Vishnu’s
 ## Usage
 
 ```bash
-usage: sharanga [-h] [-p PORTS] [-iL INPUT_FILE] [-t TIMEOUT] [-c CONCURRENT] [-sP] [--version] [target]
+usage: sharanga [-h] [-p PORTS] [-iL INPUT_FILE] [-t TIMEOUT] [-c CONCURRENT] [-o FILE] [-sP] [--version] [target]
 
 Sharanga - High-performance Python port scanner
 
 positional arguments:
-  target                Target IP address, CIDR, or domain name
+  target                Target IP address or CIDR block
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -p PORTS, --ports PORTS
                         Ports to scan (default: 1-1000)
   -iL INPUT_FILE, --input-file INPUT_FILE
-                        Read targets from file (one per line)
+                        Read targets from file
   -t TIMEOUT, --timeout TIMEOUT
                         Connection timeout in seconds (default: 1.0)
   -c CONCURRENT, --concurrent CONCURRENT
                         Max concurrent connections (default: 100)
+  -o FILE, --output FILE
+                        Write output to FILE
   -sP, --simple-port    Simple output format: subdomain:port (for subdomain scanning)
   --version             show program's version number and exit
 ```
